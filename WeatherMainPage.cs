@@ -3,9 +3,11 @@ using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using static System.Net.WebRequestMethods;
 
 namespace WeatherAppUsingApi
 {
@@ -39,6 +41,33 @@ namespace WeatherAppUsingApi
             {
                 tempTxt.Text = node.InnerText;
             }
+
+            XmlNodeList nodeList2 = responseXml.GetElementsByTagName("icon");
+            foreach (XmlNode node in nodeList2)
+            {
+                string iconLink = node.InnerText;
+                iconImg.ImageLocation = iconLink;
+            }
+
+            XmlNodeList nodeList3 = responseXml.GetElementsByTagName("wind_mph");
+            foreach (XmlNode node in nodeList3)
+            {
+                string windspeed = node.InnerText;
+                double windspeedParsed = Double.Parse(windspeed);
+                if (windspeedParsed < 8)
+                {
+                    windLabel.Text = "Barely any wind";
+                }
+                else if (windspeedParsed > 8 && windspeedParsed < 20)
+                {
+                    windLabel.Text = "Nice little breeze";
+                }
+                else
+                {
+                    windLabel.Text = "IT'S REAL WIMDY";
+                }
+            }
+
         }
     }
 }
