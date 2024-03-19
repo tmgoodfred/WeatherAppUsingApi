@@ -18,6 +18,7 @@ namespace WeatherAppUsingApi
         string zipCode = "75002";
         static HttpClient client = new HttpClient();
         XmlDocument responseXml = new XmlDocument();
+        string cityName, region;
 
         public WeatherMainPage()
         {
@@ -26,6 +27,10 @@ namespace WeatherAppUsingApi
 
         private void getTempBtn_Click(object sender, EventArgs e)
         {
+            if(zipCodeTxt != null && zipCodeTxt.Text != "")
+            {
+                zipCode = zipCodeTxt.Text;
+            }
             var request = WebRequest.Create(weatherApiUri + "current.xml?" + "key=" + apiKey + "&q=" + zipCode) as HttpWebRequest;
             var response = request.GetResponse();
 
@@ -48,6 +53,20 @@ namespace WeatherAppUsingApi
                 string iconLink = node.InnerText;
                 iconImg.ImageLocation = iconLink;
             }
+
+            XmlNodeList nodeList4 = responseXml.GetElementsByTagName("name");
+            foreach (XmlNode node in nodeList4)
+            {
+                cityName = node.InnerText;
+            }
+
+            XmlNodeList nodeList5 = responseXml.GetElementsByTagName("region");
+            foreach (XmlNode node in nodeList5)
+            {
+                region = node.InnerText;
+            }
+
+            cityStateLabel.Text = cityName + ", " + region;
 
             XmlNodeList nodeList3 = responseXml.GetElementsByTagName("wind_mph");
             foreach (XmlNode node in nodeList3)
