@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeatherMainPage));
+            this.zipCodeTxt = new System.Windows.Forms.TextBox();
             this.tempTxt = new System.Windows.Forms.TextBox();
             this.getWeatherBtn = new System.Windows.Forms.Button();
             this.iconImg = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.zipCodeTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cityStateLabel = new System.Windows.Forms.Label();
             this.windDirectionTxt = new System.Windows.Forms.TextBox();
@@ -46,13 +46,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).BeginInit();
             this.SuspendLayout();
             // 
+            // zipCodeTxt
+            // 
+            this.zipCodeTxt.Location = new System.Drawing.Point(161, 14);
+            this.zipCodeTxt.Name = "zipCodeTxt";
+            this.zipCodeTxt.Size = new System.Drawing.Size(100, 20);
+            this.zipCodeTxt.TabIndex = 0;
+            // 
             // tempTxt
             // 
             this.tempTxt.Location = new System.Drawing.Point(152, 62);
             this.tempTxt.Name = "tempTxt";
             this.tempTxt.ReadOnly = true;
             this.tempTxt.Size = new System.Drawing.Size(56, 20);
-            this.tempTxt.TabIndex = 0;
+            this.tempTxt.TabIndex = 5;
             this.tempTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // getWeatherBtn
@@ -82,13 +89,6 @@
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Current Temp (in F)";
-            // 
-            // zipCodeTxt
-            // 
-            this.zipCodeTxt.Location = new System.Drawing.Point(161, 14);
-            this.zipCodeTxt.Name = "zipCodeTxt";
-            this.zipCodeTxt.Size = new System.Drawing.Size(100, 20);
-            this.zipCodeTxt.TabIndex = 5;
             // 
             // label2
             // 

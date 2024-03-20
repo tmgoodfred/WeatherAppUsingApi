@@ -12,29 +12,15 @@ namespace WeatherAppUsingApi
         public WeatherMainPage()
         {
             InitializeComponent();
+            PopulateTextbox();
         }
 
         public void getTempBtn_Click(object sender, EventArgs e)
         {
-            weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData());
-            tempTxt.Text = weatherData.temperature;
-            iconImg.ImageLocation = "https:"+weatherData.iconUrl;
-
-            if (weatherData.regionName != "")
+            if (zipCodeTxt.Text != null && zipCodeTxt.Text != "")
             {
-                locationString = weatherData.cityName + ", " + weatherData.regionName;
-                cityStateLabel.Text = locationString;
-
+                PopulateTextbox();
             }
-            else
-            {
-                locationString = weatherData.cityName + ", " + weatherData.countryName;
-                cityStateLabel.Text = locationString;
-            }
-
-            windFeelTxt.Text = GetWindInfo(weatherData.windSpeed);
-            windDirectionTxt.Text = weatherData.windDirection;
-            humidityTxt.Text = weatherData.humidity+"%";
         }
 
         public string GetWindInfo(string windSpeed)
@@ -83,6 +69,29 @@ namespace WeatherAppUsingApi
             this.Hide();
             FutureForecastPage form = new FutureForecastPage(ZipCodeData(), locationString);
             form.Show();
+        }
+
+        public void PopulateTextbox()
+        {
+            weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData());
+            tempTxt.Text = weatherData.temperature;
+            iconImg.ImageLocation = "https:" + weatherData.iconUrl;
+
+            if (weatherData.regionName != "")
+            {
+                locationString = weatherData.cityName + ", " + weatherData.regionName;
+                cityStateLabel.Text = locationString;
+
+            }
+            else
+            {
+                locationString = weatherData.cityName + ", " + weatherData.countryName;
+                cityStateLabel.Text = locationString;
+            }
+
+            windFeelTxt.Text = GetWindInfo(weatherData.windSpeed);
+            windDirectionTxt.Text = weatherData.windDirection;
+            humidityTxt.Text = weatherData.humidity + "%";
         }
     }
 }
