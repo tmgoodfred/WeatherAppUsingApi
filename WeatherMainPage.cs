@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace WeatherAppUsingApi
@@ -16,8 +15,7 @@ namespace WeatherAppUsingApi
 
         private void getTempBtn_Click(object sender, EventArgs e)
         {
-            string zipCode = ZipCodeData();
-            weatherData = currentWeatherInfo.PopulateWeatherData(zipCode);
+            weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData());
             tempTxt.Text = weatherData.temperature;
             iconImg.ImageLocation = weatherData.iconUrl;
             cityStateLabel.Text = weatherData.cityName + ", " + weatherData.countryName;
