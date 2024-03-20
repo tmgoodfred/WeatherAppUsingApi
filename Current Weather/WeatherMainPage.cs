@@ -97,6 +97,7 @@ namespace WeatherAppUsingApi
             windFeelTxt.Text = GetWindInfo(weatherData.windSpeed);
             windDirectionTxt.Text = weatherData.windDirection;
             humidityTxt.Text = weatherData.humidity + "%";
+            theirTimeLabel.Text = "Time and Date at Location: "+ weatherData.timeCurrently;
         }
     }
 }

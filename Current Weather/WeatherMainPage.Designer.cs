@@ -43,19 +43,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.humidityTxt = new System.Windows.Forms.TextBox();
             this.forecastBtn = new System.Windows.Forms.Button();
+            this.theirTimeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).BeginInit();
             this.SuspendLayout();
             // 
             // zipCodeTxt
             // 
-            this.zipCodeTxt.Location = new System.Drawing.Point(161, 14);
+            this.zipCodeTxt.Location = new System.Drawing.Point(162, 72);
             this.zipCodeTxt.Name = "zipCodeTxt";
             this.zipCodeTxt.Size = new System.Drawing.Size(100, 20);
             this.zipCodeTxt.TabIndex = 0;
             // 
             // tempTxt
             // 
-            this.tempTxt.Location = new System.Drawing.Point(152, 62);
+            this.tempTxt.Location = new System.Drawing.Point(153, 120);
             this.tempTxt.Name = "tempTxt";
             this.tempTxt.ReadOnly = true;
             this.tempTxt.Size = new System.Drawing.Size(56, 20);
@@ -64,7 +65,7 @@
             // 
             // getWeatherBtn
             // 
-            this.getWeatherBtn.Location = new System.Drawing.Point(142, 183);
+            this.getWeatherBtn.Location = new System.Drawing.Point(143, 241);
             this.getWeatherBtn.Name = "getWeatherBtn";
             this.getWeatherBtn.Size = new System.Drawing.Size(82, 23);
             this.getWeatherBtn.TabIndex = 1;
@@ -74,7 +75,7 @@
             // 
             // iconImg
             // 
-            this.iconImg.Location = new System.Drawing.Point(57, 33);
+            this.iconImg.Location = new System.Drawing.Point(58, 91);
             this.iconImg.Name = "iconImg";
             this.iconImg.Size = new System.Drawing.Size(64, 64);
             this.iconImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -84,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 46);
+            this.label1.Location = new System.Drawing.Point(128, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 3;
@@ -93,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 17);
+            this.label2.Location = new System.Drawing.Point(105, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 6;
@@ -102,14 +103,15 @@
             // cityStateLabel
             // 
             this.cityStateLabel.AutoSize = true;
-            this.cityStateLabel.Location = new System.Drawing.Point(268, 17);
+            this.cityStateLabel.Location = new System.Drawing.Point(128, 47);
             this.cityStateLabel.Name = "cityStateLabel";
-            this.cityStateLabel.Size = new System.Drawing.Size(0, 13);
+            this.cityStateLabel.Size = new System.Drawing.Size(44, 13);
             this.cityStateLabel.TabIndex = 7;
+            this.cityStateLabel.Text = "location";
             // 
             // windDirectionTxt
             // 
-            this.windDirectionTxt.Location = new System.Drawing.Point(161, 124);
+            this.windDirectionTxt.Location = new System.Drawing.Point(162, 182);
             this.windDirectionTxt.Name = "windDirectionTxt";
             this.windDirectionTxt.ReadOnly = true;
             this.windDirectionTxt.Size = new System.Drawing.Size(34, 20);
@@ -119,7 +121,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 127);
+            this.label3.Location = new System.Drawing.Point(79, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 9;
@@ -127,7 +129,7 @@
             // 
             // windFeelTxt
             // 
-            this.windFeelTxt.Location = new System.Drawing.Point(161, 98);
+            this.windFeelTxt.Location = new System.Drawing.Point(162, 156);
             this.windFeelTxt.Name = "windFeelTxt";
             this.windFeelTxt.ReadOnly = true;
             this.windFeelTxt.Size = new System.Drawing.Size(143, 20);
@@ -136,7 +138,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 101);
+            this.label4.Location = new System.Drawing.Point(51, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 11;
@@ -145,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(67, 152);
+            this.label5.Location = new System.Drawing.Point(68, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 12;
@@ -153,7 +155,7 @@
             // 
             // humidityTxt
             // 
-            this.humidityTxt.Location = new System.Drawing.Point(161, 149);
+            this.humidityTxt.Location = new System.Drawing.Point(162, 207);
             this.humidityTxt.Name = "humidityTxt";
             this.humidityTxt.ReadOnly = true;
             this.humidityTxt.Size = new System.Drawing.Size(34, 20);
@@ -161,7 +163,7 @@
             // 
             // forecastBtn
             // 
-            this.forecastBtn.Location = new System.Drawing.Point(282, 183);
+            this.forecastBtn.Location = new System.Drawing.Point(263, 241);
             this.forecastBtn.Name = "forecastBtn";
             this.forecastBtn.Size = new System.Drawing.Size(75, 23);
             this.forecastBtn.TabIndex = 14;
@@ -169,9 +171,19 @@
             this.forecastBtn.UseVisualStyleBackColor = true;
             this.forecastBtn.Click += new System.EventHandler(this.forecastBtn_Click);
             // 
+            // theirTimeLabel
+            // 
+            this.theirTimeLabel.AutoSize = true;
+            this.theirTimeLabel.Location = new System.Drawing.Point(60, 19);
+            this.theirTimeLabel.Name = "theirTimeLabel";
+            this.theirTimeLabel.Size = new System.Drawing.Size(136, 13);
+            this.theirTimeLabel.TabIndex = 15;
+            this.theirTimeLabel.Text = "Time and Date at Location:";
+            // 
             // WeatherMainPage
             // 
-            this.ClientSize = new System.Drawing.Size(406, 237);
+            this.ClientSize = new System.Drawing.Size(378, 295);
+            this.Controls.Add(this.theirTimeLabel);
             this.Controls.Add(this.forecastBtn);
             this.Controls.Add(this.humidityTxt);
             this.Controls.Add(this.label5);
@@ -212,6 +224,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox humidityTxt;
         private System.Windows.Forms.Button forecastBtn;
+        private System.Windows.Forms.Label theirTimeLabel;
     }
 }
 
