@@ -188,6 +188,8 @@
             this.Controls.Add(this.tempTxt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WeatherMainPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Weather App";
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

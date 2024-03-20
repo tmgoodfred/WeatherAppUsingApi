@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FutureForecastPage));
             this.backBtn = new System.Windows.Forms.Button();
             this.maxTempTxt = new System.Windows.Forms.TextBox();
             this.minTempTxt = new System.Windows.Forms.TextBox();
@@ -158,8 +159,10 @@
             this.Controls.Add(this.minTempTxt);
             this.Controls.Add(this.maxTempTxt);
             this.Controls.Add(this.backBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FutureForecastPage";
-            this.Text = "FutureForecastPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Forecast";
             ((System.ComponentModel.ISupportInitialize)(this.conditionImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
