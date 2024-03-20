@@ -5,7 +5,6 @@ namespace WeatherAppUsingApi
 {
     public partial class WeatherMainPage : Form
     {
-        string zipCode = "75002";
         WeatherData weatherData = new WeatherData();
         CurrentWeatherInfo currentWeatherInfo = new CurrentWeatherInfo();
 
@@ -16,6 +15,16 @@ namespace WeatherAppUsingApi
 
         private void getTempBtn_Click(object sender, EventArgs e)
         {
+            string zipCode;
+            if (zipCodeTxt.Text != null && zipCodeTxt.Text != "")
+            {
+                zipCode = zipCodeTxt.Text;
+            }
+            else
+            {
+                LocationApiCall locationApiCall = new LocationApiCall();
+                zipCode = locationApiCall.CallApiAndReturnZip();
+            }
             weatherData = currentWeatherInfo.PopulateWeatherData(zipCode);
             tempTxt.Text = weatherData.temperature;
             iconImg.ImageLocation = weatherData.iconUrl;

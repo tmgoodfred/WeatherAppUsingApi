@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CurrentWeatherInfo.cs" />
+    <Compile Include="LocationApiCall.cs" />
     <Compile Include="WeatherData.cs" />
     <Compile Include="WeatherApiCall.cs" />
     <Compile Include="WeatherMainPage.cs">
