@@ -47,18 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PopulateWeatherInfo.cs" />
-    <Compile Include="Api Calls\LocationApiCall.cs" />
-    <Compile Include="WeatherData.cs" />
-    <Compile Include="Api Calls\WeatherApiCall.cs" />
-    <Compile Include="WeatherMainPage.cs">
+    <Compile Include="Forecast\ForecastData.cs" />
+    <Compile Include="Forecast\FutureForecastPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WeatherMainPage.Designer.cs">
+    <Compile Include="Forecast\FutureForecastPage.Designer.cs">
+      <DependentUpon>FutureForecastPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forecast\PopulateForecastInfo.cs" />
+    <Compile Include="Current Weather\PopulateWeatherInfo.cs" />
+    <Compile Include="API Calls\LocationApiCall.cs" />
+    <Compile Include="Current Weather\WeatherData.cs" />
+    <Compile Include="API Calls\WeatherApiCall.cs" />
+    <Compile Include="Current Weather\WeatherMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Current Weather\WeatherMainPage.Designer.cs">
       <DependentUpon>WeatherMainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forecast\FutureForecastPage.resx">
+      <DependentUpon>FutureForecastPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,7 +79,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="WeatherMainPage.resx">
+    <EmbeddedResource Include="Current Weather\WeatherMainPage.resx">
       <DependentUpon>WeatherMainPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeatherMainPage));
             this.tempTxt = new System.Windows.Forms.TextBox();
-            this.getTempBtn = new System.Windows.Forms.Button();
+            this.getWeatherBtn = new System.Windows.Forms.Button();
             this.iconImg = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.zipCodeTxt = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.humidityTxt = new System.Windows.Forms.TextBox();
+            this.forecastBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,15 +55,15 @@
             this.tempTxt.TabIndex = 0;
             this.tempTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // getTempBtn
+            // getWeatherBtn
             // 
-            this.getTempBtn.Location = new System.Drawing.Point(142, 183);
-            this.getTempBtn.Name = "getTempBtn";
-            this.getTempBtn.Size = new System.Drawing.Size(82, 23);
-            this.getTempBtn.TabIndex = 1;
-            this.getTempBtn.Text = "Get Weather";
-            this.getTempBtn.UseVisualStyleBackColor = true;
-            this.getTempBtn.Click += new System.EventHandler(this.getTempBtn_Click);
+            this.getWeatherBtn.Location = new System.Drawing.Point(142, 183);
+            this.getWeatherBtn.Name = "getWeatherBtn";
+            this.getWeatherBtn.Size = new System.Drawing.Size(82, 23);
+            this.getWeatherBtn.TabIndex = 1;
+            this.getWeatherBtn.Text = "Get Weather";
+            this.getWeatherBtn.UseVisualStyleBackColor = true;
+            this.getWeatherBtn.Click += new System.EventHandler(this.getTempBtn_Click);
             // 
             // iconImg
             // 
@@ -158,9 +159,20 @@
             this.humidityTxt.Size = new System.Drawing.Size(34, 20);
             this.humidityTxt.TabIndex = 13;
             // 
+            // forecastBtn
+            // 
+            this.forecastBtn.Location = new System.Drawing.Point(282, 183);
+            this.forecastBtn.Name = "forecastBtn";
+            this.forecastBtn.Size = new System.Drawing.Size(75, 23);
+            this.forecastBtn.TabIndex = 14;
+            this.forecastBtn.Text = "Forecast";
+            this.forecastBtn.UseVisualStyleBackColor = true;
+            this.forecastBtn.Click += new System.EventHandler(this.forecastBtn_Click);
+            // 
             // WeatherMainPage
             // 
             this.ClientSize = new System.Drawing.Size(406, 237);
+            this.Controls.Add(this.forecastBtn);
             this.Controls.Add(this.humidityTxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -172,7 +184,7 @@
             this.Controls.Add(this.zipCodeTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconImg);
-            this.Controls.Add(this.getTempBtn);
+            this.Controls.Add(this.getWeatherBtn);
             this.Controls.Add(this.tempTxt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WeatherMainPage";
@@ -185,7 +197,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox tempTxt;
-        private System.Windows.Forms.Button getTempBtn;
+        private System.Windows.Forms.Button getWeatherBtn;
         private System.Windows.Forms.PictureBox iconImg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox zipCodeTxt;
@@ -197,6 +209,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox humidityTxt;
+        private System.Windows.Forms.Button forecastBtn;
     }
 }
 

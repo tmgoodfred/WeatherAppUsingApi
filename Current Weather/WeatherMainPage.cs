@@ -13,7 +13,7 @@ namespace WeatherAppUsingApi
             InitializeComponent();
         }
 
-        private void getTempBtn_Click(object sender, EventArgs e)
+        public void getTempBtn_Click(object sender, EventArgs e)
         {
             weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData());
             tempTxt.Text = weatherData.temperature;
@@ -72,6 +72,13 @@ namespace WeatherAppUsingApi
                 zipCode = locationApiCall.CallApiAndReturnZip();
             }
             return zipCode;
+        }
+
+        private void forecastBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FutureForecastPage form = new FutureForecastPage(ZipCodeData());
+            form.Show();
         }
     }
 }

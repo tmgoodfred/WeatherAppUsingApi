@@ -10,7 +10,7 @@ namespace WeatherAppUsingApi
 
         public WeatherData PopulateWeatherData(string zipCode)
         {
-            responseXml = callTheApi.CallApi(zipCode);
+            responseXml = callTheApi.CallApi_CurrentWeather(zipCode);
 
             weatherData.cityName = GetNodeData("name",responseXml);
             weatherData.regionName = GetNodeData("region", responseXml);
