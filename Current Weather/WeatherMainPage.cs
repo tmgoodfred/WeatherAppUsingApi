@@ -79,7 +79,7 @@ namespace WeatherAppUsingApi
 
             if (weatherData.regionName != "")
             {
-                locationString = weatherData.cityName + ", " + weatherData.regionName;
+                locationString = weatherData.cityName + ", " + weatherData.regionName + ", " + weatherData.countryName;
                 cityStateLabel.Text = locationString;
 
             }
