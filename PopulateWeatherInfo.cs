@@ -2,7 +2,7 @@
 
 namespace WeatherAppUsingApi
 {
-    internal class CurrentWeatherInfo
+    internal class PopulateWeatherInfo
     {
         WeatherData weatherData = new WeatherData();
         WeatherApiCall callTheApi = new WeatherApiCall();

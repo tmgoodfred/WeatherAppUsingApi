@@ -6,7 +6,7 @@ namespace WeatherAppUsingApi
     public partial class WeatherMainPage : Form
     {
         WeatherData weatherData = new WeatherData();
-        CurrentWeatherInfo currentWeatherInfo = new CurrentWeatherInfo();
+        PopulateWeatherInfo currentWeatherInfo = new PopulateWeatherInfo();
 
         public WeatherMainPage()
         {
