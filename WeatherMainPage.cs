@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace WeatherAppUsingApi
@@ -15,6 +16,35 @@ namespace WeatherAppUsingApi
 
         private void getTempBtn_Click(object sender, EventArgs e)
         {
+            string zipCode = ZipCodeData();
+            weatherData = currentWeatherInfo.PopulateWeatherData(zipCode);
+            tempTxt.Text = weatherData.temperature;
+            iconImg.ImageLocation = weatherData.iconUrl;
+            cityStateLabel.Text = weatherData.cityName + ", " + weatherData.countryName;
+            windLabel.Text = GetWindInfo(weatherData.windSpeed);
+        }
+
+        public string GetWindInfo(string windSpeed)
+        {
+            string stringToReturn;
+            double windspeedParsed = Double.Parse(windSpeed);
+            if (windspeedParsed < 8)
+            {
+                stringToReturn = "Barely any wind";
+            }
+            else if (windspeedParsed > 8 && windspeedParsed < 20)
+            {
+                stringToReturn = "Nice little breeze";
+            }
+            else
+            {
+                stringToReturn = "IT'S REAL WIMDY";
+            }
+            return stringToReturn;
+        }
+
+        public string ZipCodeData()
+        {
             string zipCode;
             if (zipCodeTxt.Text != null && zipCodeTxt.Text != "")
             {
@@ -25,25 +55,7 @@ namespace WeatherAppUsingApi
                 LocationApiCall locationApiCall = new LocationApiCall();
                 zipCode = locationApiCall.CallApiAndReturnZip();
             }
-            weatherData = currentWeatherInfo.PopulateWeatherData(zipCode);
-            tempTxt.Text = weatherData.temperature;
-            iconImg.ImageLocation = weatherData.iconUrl;
-            cityStateLabel.Text = weatherData.cityName + ", " + weatherData.countryName;
-
-            string windspeed = weatherData.windSpeed;
-            double windspeedParsed = Double.Parse(windspeed);
-            if (windspeedParsed < 8)
-            {
-                windLabel.Text = "Barely any wind";
-            }
-            else if (windspeedParsed > 8 && windspeedParsed < 20)
-            {
-                windLabel.Text = "Nice little breeze";
-            }
-            else
-            {
-                windLabel.Text = "IT'S REAL WIMDY";
-            }
+            return zipCode;
         }
     }
 }
