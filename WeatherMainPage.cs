@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace WeatherAppUsingApi
 {
@@ -17,26 +18,44 @@ namespace WeatherAppUsingApi
         {
             weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData());
             tempTxt.Text = weatherData.temperature;
-            iconImg.ImageLocation = weatherData.iconUrl;
-            cityStateLabel.Text = weatherData.cityName + ", " + weatherData.countryName;
-            windLabel.Text = GetWindInfo(weatherData.windSpeed);
+            iconImg.ImageLocation = "https:"+weatherData.iconUrl;
+
+            if (weatherData.regionName != "")
+            {
+                cityStateLabel.Text = weatherData.cityName + ", " + weatherData.regionName;
+            }
+            else
+            {
+                cityStateLabel.Text = weatherData.cityName + ", " + weatherData.countryName;
+            }
+
+            windFeelTxt.Text = GetWindInfo(weatherData.windSpeed);
+            windDirectionTxt.Text = weatherData.windDirection;
+            humidityTxt.Text = weatherData.humidity+"%";
         }
 
         public string GetWindInfo(string windSpeed)
         {
             string stringToReturn;
-            double windspeedParsed = Double.Parse(windSpeed);
-            if (windspeedParsed < 8)
+            try
             {
-                stringToReturn = "Barely any wind";
+                double windspeedParsed = Double.Parse(windSpeed);
+                if (windspeedParsed < 8)
+                {
+                    stringToReturn = "Barely any wind";
+                }
+                else if (windspeedParsed > 8 && windspeedParsed < 20)
+                {
+                    stringToReturn = "Nice little breeze";
+                }
+                else
+                {
+                    stringToReturn = "IT'S REAL WIMDY";
+                }
             }
-            else if (windspeedParsed > 8 && windspeedParsed < 20)
+            catch
             {
-                stringToReturn = "Nice little breeze";
-            }
-            else
-            {
-                stringToReturn = "IT'S REAL WIMDY";
+                stringToReturn = "";
             }
             return stringToReturn;
         }

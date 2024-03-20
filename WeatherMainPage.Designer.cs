@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeatherMainPage));
             this.tempTxt = new System.Windows.Forms.TextBox();
             this.getTempBtn = new System.Windows.Forms.Button();
             this.iconImg = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.windLabel = new System.Windows.Forms.Label();
             this.zipCodeTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cityStateLabel = new System.Windows.Forms.Label();
+            this.windDirectionTxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.windFeelTxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.humidityTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).BeginInit();
             this.SuspendLayout();
             // 
             // tempTxt
             // 
-            this.tempTxt.Location = new System.Drawing.Point(113, 63);
+            this.tempTxt.Location = new System.Drawing.Point(152, 62);
             this.tempTxt.Name = "tempTxt";
             this.tempTxt.ReadOnly = true;
             this.tempTxt.Size = new System.Drawing.Size(56, 20);
@@ -50,7 +56,7 @@
             // 
             // getTempBtn
             // 
-            this.getTempBtn.Location = new System.Drawing.Point(101, 128);
+            this.getTempBtn.Location = new System.Drawing.Point(142, 183);
             this.getTempBtn.Name = "getTempBtn";
             this.getTempBtn.Size = new System.Drawing.Size(82, 23);
             this.getTempBtn.TabIndex = 1;
@@ -60,32 +66,25 @@
             // 
             // iconImg
             // 
-            this.iconImg.Location = new System.Drawing.Point(12, 47);
+            this.iconImg.Location = new System.Drawing.Point(57, 33);
             this.iconImg.Name = "iconImg";
             this.iconImg.Size = new System.Drawing.Size(64, 64);
+            this.iconImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconImg.TabIndex = 2;
             this.iconImg.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 47);
+            this.label1.Location = new System.Drawing.Point(127, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Current Temp (in F)";
             // 
-            // windLabel
-            // 
-            this.windLabel.AutoSize = true;
-            this.windLabel.Location = new System.Drawing.Point(110, 98);
-            this.windLabel.Name = "windLabel";
-            this.windLabel.Size = new System.Drawing.Size(0, 13);
-            this.windLabel.TabIndex = 4;
-            // 
             // zipCodeTxt
             // 
-            this.zipCodeTxt.Location = new System.Drawing.Point(141, 12);
+            this.zipCodeTxt.Location = new System.Drawing.Point(161, 14);
             this.zipCodeTxt.Name = "zipCodeTxt";
             this.zipCodeTxt.Size = new System.Drawing.Size(100, 20);
             this.zipCodeTxt.TabIndex = 5;
@@ -93,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 15);
+            this.label2.Location = new System.Drawing.Point(53, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 6;
@@ -102,22 +101,80 @@
             // cityStateLabel
             // 
             this.cityStateLabel.AutoSize = true;
-            this.cityStateLabel.Location = new System.Drawing.Point(190, 137);
+            this.cityStateLabel.Location = new System.Drawing.Point(268, 17);
             this.cityStateLabel.Name = "cityStateLabel";
             this.cityStateLabel.Size = new System.Drawing.Size(0, 13);
             this.cityStateLabel.TabIndex = 7;
             // 
+            // windDirectionTxt
+            // 
+            this.windDirectionTxt.Location = new System.Drawing.Point(161, 124);
+            this.windDirectionTxt.Name = "windDirectionTxt";
+            this.windDirectionTxt.ReadOnly = true;
+            this.windDirectionTxt.Size = new System.Drawing.Size(34, 20);
+            this.windDirectionTxt.TabIndex = 8;
+            this.windDirectionTxt.Text = " ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(78, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Wind Direction";
+            // 
+            // windFeelTxt
+            // 
+            this.windFeelTxt.Location = new System.Drawing.Point(161, 98);
+            this.windFeelTxt.Name = "windFeelTxt";
+            this.windFeelTxt.ReadOnly = true;
+            this.windFeelTxt.Size = new System.Drawing.Size(143, 20);
+            this.windFeelTxt.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "How\'s the wind feel?";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(72, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "How Moist Is It?";
+            // 
+            // humidityTxt
+            // 
+            this.humidityTxt.Location = new System.Drawing.Point(161, 149);
+            this.humidityTxt.Name = "humidityTxt";
+            this.humidityTxt.ReadOnly = true;
+            this.humidityTxt.Size = new System.Drawing.Size(34, 20);
+            this.humidityTxt.TabIndex = 13;
+            // 
             // WeatherMainPage
             // 
-            this.ClientSize = new System.Drawing.Size(284, 170);
+            this.ClientSize = new System.Drawing.Size(406, 237);
+            this.Controls.Add(this.humidityTxt);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.windFeelTxt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.windDirectionTxt);
             this.Controls.Add(this.cityStateLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.zipCodeTxt);
-            this.Controls.Add(this.windLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconImg);
             this.Controls.Add(this.getTempBtn);
             this.Controls.Add(this.tempTxt);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WeatherMainPage";
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).EndInit();
             this.ResumeLayout(false);
@@ -131,10 +188,15 @@
         private System.Windows.Forms.Button getTempBtn;
         private System.Windows.Forms.PictureBox iconImg;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label windLabel;
         private System.Windows.Forms.TextBox zipCodeTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label cityStateLabel;
+        private System.Windows.Forms.TextBox windDirectionTxt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox windFeelTxt;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox humidityTxt;
     }
 }
 
