@@ -59,6 +59,7 @@
             // 
             this.maxTempTxt.Location = new System.Drawing.Point(228, 37);
             this.maxTempTxt.Name = "maxTempTxt";
+            this.maxTempTxt.ReadOnly = true;
             this.maxTempTxt.Size = new System.Drawing.Size(100, 20);
             this.maxTempTxt.TabIndex = 1;
             // 
@@ -66,6 +67,7 @@
             // 
             this.minTempTxt.Location = new System.Drawing.Point(228, 73);
             this.minTempTxt.Name = "minTempTxt";
+            this.minTempTxt.ReadOnly = true;
             this.minTempTxt.Size = new System.Drawing.Size(100, 20);
             this.minTempTxt.TabIndex = 2;
             // 
@@ -73,6 +75,7 @@
             // 
             this.willItRainTxt.Location = new System.Drawing.Point(228, 112);
             this.willItRainTxt.Name = "willItRainTxt";
+            this.willItRainTxt.ReadOnly = true;
             this.willItRainTxt.Size = new System.Drawing.Size(100, 20);
             this.willItRainTxt.TabIndex = 3;
             // 
@@ -80,6 +83,7 @@
             // 
             this.chanceOfRainTxt.Location = new System.Drawing.Point(228, 150);
             this.chanceOfRainTxt.Name = "chanceOfRainTxt";
+            this.chanceOfRainTxt.ReadOnly = true;
             this.chanceOfRainTxt.Size = new System.Drawing.Size(100, 20);
             this.chanceOfRainTxt.TabIndex = 4;
             // 
@@ -87,6 +91,7 @@
             // 
             this.conditionTxt.Location = new System.Drawing.Point(228, 188);
             this.conditionTxt.Name = "conditionTxt";
+            this.conditionTxt.ReadOnly = true;
             this.conditionTxt.Size = new System.Drawing.Size(100, 20);
             this.conditionTxt.TabIndex = 5;
             // 
