@@ -36,7 +36,7 @@ namespace WeatherAppUsingApi
         {
             string hostName = Dns.GetHostName();
             Console.WriteLine(hostName);
-            string myIP = Dns.GetHostByName(hostName).AddressList[0].ToString();
+            string myIP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
             return myIP;
         }
     }
