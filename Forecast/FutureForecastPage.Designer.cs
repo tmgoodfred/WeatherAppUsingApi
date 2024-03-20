@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.locationLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.conditionImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,11 +143,20 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Overall Condition";
             // 
+            // locationLabel
+            // 
+            this.locationLabel.AutoSize = true;
+            this.locationLabel.Location = new System.Drawing.Point(159, 9);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(0, 13);
+            this.locationLabel.TabIndex = 12;
+            // 
             // FutureForecastPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 312);
+            this.Controls.Add(this.locationLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -183,5 +193,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label locationLabel;
     }
 }

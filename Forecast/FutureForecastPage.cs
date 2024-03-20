@@ -9,7 +9,7 @@ namespace WeatherAppUsingApi
         PopulateForecastInfo currentForecastInfo = new PopulateForecastInfo();
         string zipCode;
 
-        public FutureForecastPage(string zipCode)
+        public FutureForecastPage(string zipCode, string location)
         {
             InitializeComponent();
             this.zipCode = zipCode;
@@ -27,6 +27,7 @@ namespace WeatherAppUsingApi
             chanceOfRainTxt.Text = forecastData.chanceOfRain + "%";
             conditionTxt.Text = forecastData.overallCondition;
             conditionImg.ImageLocation = forecastData.overallConditionUrl;
+            locationLabel.Text = location;
         }
 
         private void backBtn_Click(object sender, EventArgs e)

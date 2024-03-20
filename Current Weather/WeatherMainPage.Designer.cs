@@ -145,11 +145,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 152);
+            this.label5.Location = new System.Drawing.Point(67, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 12;
-            this.label5.Text = "How Moist Is It?";
+            this.label5.Text = "How Humid Is It?";
             // 
             // humidityTxt
             // 

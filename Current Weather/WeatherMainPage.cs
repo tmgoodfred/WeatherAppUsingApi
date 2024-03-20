@@ -7,6 +7,7 @@ namespace WeatherAppUsingApi
     {
         WeatherData weatherData = new WeatherData();
         PopulateWeatherInfo currentWeatherInfo = new PopulateWeatherInfo();
+        string locationString;
 
         public WeatherMainPage()
         {
@@ -21,11 +22,14 @@ namespace WeatherAppUsingApi
 
             if (weatherData.regionName != "")
             {
-                cityStateLabel.Text = weatherData.cityName + ", " + weatherData.regionName;
+                locationString = weatherData.cityName + ", " + weatherData.regionName;
+                cityStateLabel.Text = locationString;
+
             }
             else
             {
-                cityStateLabel.Text = weatherData.cityName + ", " + weatherData.countryName;
+                locationString = weatherData.cityName + ", " + weatherData.countryName;
+                cityStateLabel.Text = locationString;
             }
 
             windFeelTxt.Text = GetWindInfo(weatherData.windSpeed);
@@ -77,7 +81,7 @@ namespace WeatherAppUsingApi
         private void forecastBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FutureForecastPage form = new FutureForecastPage(ZipCodeData());
+            FutureForecastPage form = new FutureForecastPage(ZipCodeData(), locationString);
             form.Show();
         }
     }
