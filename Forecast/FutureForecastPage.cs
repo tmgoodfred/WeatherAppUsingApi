@@ -33,7 +33,7 @@ namespace WeatherAppUsingApi
         private void backBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            WeatherMainPage weatherMainPage = new WeatherMainPage();
+            WeatherMainPage weatherMainPage = new WeatherMainPage(zipCode);
             weatherMainPage.Show();
             EventArgs eventArgs = new EventArgs();
             weatherMainPage.getTempBtn_Click(Text = "Get Weather", eventArgs);

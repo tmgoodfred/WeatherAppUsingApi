@@ -13,7 +13,7 @@ namespace WeatherAppUsingApi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WeatherMainPage());
+            Application.Run(new WeatherMainPage(""));
         }
     }
 }

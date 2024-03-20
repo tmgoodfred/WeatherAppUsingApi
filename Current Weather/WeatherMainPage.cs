@@ -8,18 +8,21 @@ namespace WeatherAppUsingApi
         WeatherData weatherData = new WeatherData();
         PopulateWeatherInfo currentWeatherInfo = new PopulateWeatherInfo();
         string locationString;
+        string masterLocationInfo = "";
 
-        public WeatherMainPage()
+        public WeatherMainPage(string locationData)
         {
             InitializeComponent();
-            PopulateTextbox();
+            masterLocationInfo = locationData;
+            PopulateTextbox(locationData);
         }
 
         public void getTempBtn_Click(object sender, EventArgs e)
         {
             if (zipCodeTxt.Text != null && zipCodeTxt.Text != "")
             {
-                PopulateTextbox();
+                masterLocationInfo = zipCodeTxt.Text;
+                PopulateTextbox(zipCodeTxt.Text);
             }
         }
 
@@ -49,17 +52,19 @@ namespace WeatherAppUsingApi
             return stringToReturn;
         }
 
-        public string ZipCodeData()
+        public string ZipCodeData(string zipCodeCurrent)
         {
-            string zipCode;
-            if (zipCodeTxt.Text != null && zipCodeTxt.Text != "")
+            string zipCode = "";
+            if (zipCodeCurrent != null && zipCodeCurrent != "")
             {
-                zipCode = zipCodeTxt.Text;
+                masterLocationInfo = zipCodeCurrent;
+                zipCode = masterLocationInfo;
             }
             else
             {
                 LocationApiCall locationApiCall = new LocationApiCall();
                 zipCode = locationApiCall.CallApiAndReturnZip();
+                masterLocationInfo = zipCode;
             }
             return zipCode;
         }
@@ -67,13 +72,13 @@ namespace WeatherAppUsingApi
         private void forecastBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FutureForecastPage form = new FutureForecastPage(ZipCodeData(), locationString);
+            FutureForecastPage form = new FutureForecastPage(masterLocationInfo, locationString);
             form.Show();
         }
 
-        public void PopulateTextbox()
+        public void PopulateTextbox(string locationData)
         {
-            weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData());
+            weatherData = currentWeatherInfo.PopulateWeatherData(ZipCodeData(masterLocationInfo));
             tempTxt.Text = weatherData.temperature;
             iconImg.ImageLocation = "https:" + weatherData.iconUrl;
 
