@@ -4,7 +4,7 @@ In order for this to function properly on a local machine, you will need to add 
 You can get your own API key at https://www.weatherapi.com/
 
 The config file should look something like:
-
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <startup> 
@@ -14,3 +14,4 @@ The config file should look something like:
 		<add key="apiKey" value="API KEY GOES HERE"/>
 	</appSettings>
 </configuration>
+```
