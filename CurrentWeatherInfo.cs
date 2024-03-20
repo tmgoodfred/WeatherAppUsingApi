@@ -4,12 +4,13 @@ namespace WeatherAppUsingApi
 {
     internal class CurrentWeatherInfo
     {
-        WeatherData weatherData;
-        WeatherApiCall call;
+        WeatherData weatherData = new WeatherData();
+        WeatherApiCall callTheApi = new WeatherApiCall();
+        XmlDocument responseXml = new XmlDocument();
 
         public WeatherData PopulateWeatherData(string zipCode)
         {
-            XmlDocument responseXml = call.CallApi(zipCode);
+            responseXml = callTheApi.CallApi(zipCode);
 
             weatherData.cityName = GetNodeData("name",responseXml);
             weatherData.regionName = GetNodeData("region", responseXml);
