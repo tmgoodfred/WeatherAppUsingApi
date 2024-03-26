@@ -570,9 +570,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(757, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 13);
+            this.label7.Size = new System.Drawing.Size(137, 13);
             this.label7.TabIndex = 54;
-            this.label7.Text = "Heat Index (1- low, 6-high)";
+            this.label7.Text = "Heat Index (1- low, 6 - high)";
             // 
             // heatIndexDay2Txt
             // 
