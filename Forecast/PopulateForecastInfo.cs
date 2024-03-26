@@ -23,6 +23,14 @@ namespace WeatherAppUsingApi
         {
             if(whichDate == 0) 
             {
+                maxTempList.Clear();
+                minTempList.Clear();
+                willItRainList.Clear();
+                chanceOfRainList.Clear();
+                overallConditionList.Clear();
+                overallConditionUrlList.Clear();
+                currentDayList.Clear();
+                heatIndexList.Clear();
                 responseXml = callTheApi.CallApi_FutureForecast(zipCode);
             }
 

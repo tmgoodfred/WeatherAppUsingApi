@@ -211,7 +211,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Next 7 Days";
+            this.label6.Text = "Next 2 Days";
             // 
             // day1Lbl
             // 
@@ -345,6 +345,7 @@
             this.minTempDay3Txt.Size = new System.Drawing.Size(54, 20);
             this.minTempDay3Txt.TabIndex = 32;
             this.minTempDay3Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minTempDay3Txt.Visible = false;
             // 
             // rainDay3Txt
             // 
@@ -354,6 +355,7 @@
             this.rainDay3Txt.Size = new System.Drawing.Size(47, 20);
             this.rainDay3Txt.TabIndex = 31;
             this.rainDay3Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rainDay3Txt.Visible = false;
             // 
             // condDay3Txt
             // 
@@ -362,6 +364,7 @@
             this.condDay3Txt.ReadOnly = true;
             this.condDay3Txt.Size = new System.Drawing.Size(122, 20);
             this.condDay3Txt.TabIndex = 30;
+            this.condDay3Txt.Visible = false;
             // 
             // maxTempDay3Txt
             // 
@@ -371,6 +374,7 @@
             this.maxTempDay3Txt.Size = new System.Drawing.Size(52, 20);
             this.maxTempDay3Txt.TabIndex = 29;
             this.maxTempDay3Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxTempDay3Txt.Visible = false;
             // 
             // day3Lbl
             // 
@@ -380,6 +384,7 @@
             this.day3Lbl.Size = new System.Drawing.Size(30, 13);
             this.day3Lbl.TabIndex = 28;
             this.day3Lbl.Text = "day3";
+            this.day3Lbl.Visible = false;
             // 
             // minTempDay4Txt
             // 
@@ -389,6 +394,7 @@
             this.minTempDay4Txt.Size = new System.Drawing.Size(54, 20);
             this.minTempDay4Txt.TabIndex = 37;
             this.minTempDay4Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minTempDay4Txt.Visible = false;
             // 
             // rainDay4Txt
             // 
@@ -398,6 +404,7 @@
             this.rainDay4Txt.Size = new System.Drawing.Size(47, 20);
             this.rainDay4Txt.TabIndex = 36;
             this.rainDay4Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rainDay4Txt.Visible = false;
             // 
             // condDay4Txt
             // 
@@ -406,6 +413,7 @@
             this.condDay4Txt.ReadOnly = true;
             this.condDay4Txt.Size = new System.Drawing.Size(122, 20);
             this.condDay4Txt.TabIndex = 35;
+            this.condDay4Txt.Visible = false;
             // 
             // maxTempDay4Txt
             // 
@@ -415,6 +423,7 @@
             this.maxTempDay4Txt.Size = new System.Drawing.Size(52, 20);
             this.maxTempDay4Txt.TabIndex = 34;
             this.maxTempDay4Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxTempDay4Txt.Visible = false;
             // 
             // day4Lbl
             // 
@@ -424,6 +433,7 @@
             this.day4Lbl.Size = new System.Drawing.Size(30, 13);
             this.day4Lbl.TabIndex = 33;
             this.day4Lbl.Text = "day4";
+            this.day4Lbl.Visible = false;
             // 
             // minTempDay5Txt
             // 
@@ -433,6 +443,7 @@
             this.minTempDay5Txt.Size = new System.Drawing.Size(54, 20);
             this.minTempDay5Txt.TabIndex = 42;
             this.minTempDay5Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minTempDay5Txt.Visible = false;
             // 
             // rainDay5Txt
             // 
@@ -442,6 +453,7 @@
             this.rainDay5Txt.Size = new System.Drawing.Size(47, 20);
             this.rainDay5Txt.TabIndex = 41;
             this.rainDay5Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rainDay5Txt.Visible = false;
             // 
             // condDay5Txt
             // 
@@ -450,6 +462,7 @@
             this.condDay5Txt.ReadOnly = true;
             this.condDay5Txt.Size = new System.Drawing.Size(122, 20);
             this.condDay5Txt.TabIndex = 40;
+            this.condDay5Txt.Visible = false;
             // 
             // maxTempDay5Txt
             // 
@@ -459,6 +472,7 @@
             this.maxTempDay5Txt.Size = new System.Drawing.Size(52, 20);
             this.maxTempDay5Txt.TabIndex = 39;
             this.maxTempDay5Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxTempDay5Txt.Visible = false;
             // 
             // day5Lbl
             // 
@@ -468,6 +482,7 @@
             this.day5Lbl.Size = new System.Drawing.Size(30, 13);
             this.day5Lbl.TabIndex = 38;
             this.day5Lbl.Text = "day5";
+            this.day5Lbl.Visible = false;
             // 
             // minTempDay6Txt
             // 
@@ -477,6 +492,7 @@
             this.minTempDay6Txt.Size = new System.Drawing.Size(54, 20);
             this.minTempDay6Txt.TabIndex = 47;
             this.minTempDay6Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minTempDay6Txt.Visible = false;
             // 
             // rainDay6Txt
             // 
@@ -486,6 +502,7 @@
             this.rainDay6Txt.Size = new System.Drawing.Size(47, 20);
             this.rainDay6Txt.TabIndex = 46;
             this.rainDay6Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rainDay6Txt.Visible = false;
             // 
             // condDay6Txt
             // 
@@ -494,6 +511,7 @@
             this.condDay6Txt.ReadOnly = true;
             this.condDay6Txt.Size = new System.Drawing.Size(122, 20);
             this.condDay6Txt.TabIndex = 45;
+            this.condDay6Txt.Visible = false;
             // 
             // maxTempDay6Txt
             // 
@@ -503,6 +521,7 @@
             this.maxTempDay6Txt.Size = new System.Drawing.Size(52, 20);
             this.maxTempDay6Txt.TabIndex = 44;
             this.maxTempDay6Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxTempDay6Txt.Visible = false;
             // 
             // day6Lbl
             // 
@@ -512,6 +531,7 @@
             this.day6Lbl.Size = new System.Drawing.Size(30, 13);
             this.day6Lbl.TabIndex = 43;
             this.day6Lbl.Text = "day6";
+            this.day6Lbl.Visible = false;
             // 
             // minTempDay7Txt
             // 
@@ -521,6 +541,7 @@
             this.minTempDay7Txt.Size = new System.Drawing.Size(54, 20);
             this.minTempDay7Txt.TabIndex = 52;
             this.minTempDay7Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minTempDay7Txt.Visible = false;
             // 
             // rainDay7Txt
             // 
@@ -530,6 +551,7 @@
             this.rainDay7Txt.Size = new System.Drawing.Size(47, 20);
             this.rainDay7Txt.TabIndex = 51;
             this.rainDay7Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rainDay7Txt.Visible = false;
             // 
             // condDay7Txt
             // 
@@ -538,6 +560,7 @@
             this.condDay7Txt.ReadOnly = true;
             this.condDay7Txt.Size = new System.Drawing.Size(122, 20);
             this.condDay7Txt.TabIndex = 50;
+            this.condDay7Txt.Visible = false;
             // 
             // maxTempDay7Txt
             // 
@@ -547,6 +570,7 @@
             this.maxTempDay7Txt.Size = new System.Drawing.Size(52, 20);
             this.maxTempDay7Txt.TabIndex = 49;
             this.maxTempDay7Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxTempDay7Txt.Visible = false;
             // 
             // day7Lbl
             // 
@@ -556,6 +580,7 @@
             this.day7Lbl.Size = new System.Drawing.Size(30, 13);
             this.day7Lbl.TabIndex = 48;
             this.day7Lbl.Text = "day7";
+            this.day7Lbl.Visible = false;
             // 
             // heatIndexDay1Txt
             // 
@@ -589,6 +614,7 @@
             this.heatIndexDay3Txt.ReadOnly = true;
             this.heatIndexDay3Txt.Size = new System.Drawing.Size(163, 20);
             this.heatIndexDay3Txt.TabIndex = 56;
+            this.heatIndexDay3Txt.Visible = false;
             // 
             // heatIndexDay4Txt
             // 
@@ -597,6 +623,7 @@
             this.heatIndexDay4Txt.ReadOnly = true;
             this.heatIndexDay4Txt.Size = new System.Drawing.Size(163, 20);
             this.heatIndexDay4Txt.TabIndex = 57;
+            this.heatIndexDay4Txt.Visible = false;
             // 
             // heatIndexDay5Txt
             // 
@@ -605,6 +632,7 @@
             this.heatIndexDay5Txt.ReadOnly = true;
             this.heatIndexDay5Txt.Size = new System.Drawing.Size(163, 20);
             this.heatIndexDay5Txt.TabIndex = 58;
+            this.heatIndexDay5Txt.Visible = false;
             // 
             // heatIndexDay6Txt
             // 
@@ -613,6 +641,7 @@
             this.heatIndexDay6Txt.ReadOnly = true;
             this.heatIndexDay6Txt.Size = new System.Drawing.Size(163, 20);
             this.heatIndexDay6Txt.TabIndex = 59;
+            this.heatIndexDay6Txt.Visible = false;
             // 
             // heatIndexDay7Txt
             // 
@@ -621,6 +650,7 @@
             this.heatIndexDay7Txt.ReadOnly = true;
             this.heatIndexDay7Txt.Size = new System.Drawing.Size(163, 20);
             this.heatIndexDay7Txt.TabIndex = 60;
+            this.heatIndexDay7Txt.Visible = false;
             // 
             // FutureForecastPage
             // 

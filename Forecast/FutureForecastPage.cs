@@ -46,7 +46,7 @@ namespace WeatherAppUsingApi
             day2Lbl.Text = forecastDataDay2.currentDay;
             heatIndexDay2Txt.Text = forecastDataDay2.heatIndex;
 
-            forecastDataDay3 = currentForecastInfo.PopulateForecastData(zipCode, 3);
+            /*forecastDataDay3 = currentForecastInfo.PopulateForecastData(zipCode, 3);
             maxTempDay3Txt.Text = forecastDataDay3.maxTemp;
             minTempDay3Txt.Text = forecastDataDay3.minTemp;
             rainDay3Txt.Text = RainResult(forecastDataDay3);
@@ -84,7 +84,7 @@ namespace WeatherAppUsingApi
             rainDay7Txt.Text = RainResult(forecastDataDay7);
             condDay7Txt.Text = forecastDataDay7.overallCondition;
             day7Lbl.Text = forecastDataDay7.currentDay;
-            heatIndexDay7Txt.Text = forecastDataDay7.heatIndex;
+            heatIndexDay7Txt.Text = forecastDataDay7.heatIndex;*/
         }
 
         private void backBtn_Click(object sender, EventArgs e)
