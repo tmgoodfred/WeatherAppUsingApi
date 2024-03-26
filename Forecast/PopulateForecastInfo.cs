@@ -17,6 +17,7 @@ namespace WeatherAppUsingApi
         List<string> overallConditionList = new List<string>();
         List<string> overallConditionUrlList = new List<string>();
         List<string> currentDayList = new List<string>();
+        List<string> heatIndexList = new List<string>();
 
         public ForecastData PopulateForecastData(string zipCode, int whichDate)
         {
@@ -37,6 +38,8 @@ namespace WeatherAppUsingApi
             forecastData.overallCondition = overallConditionList[whichDate];
             GetNodeData("condition/icon", responseXml, "overallconditionurl", whichDate);
             forecastData.overallConditionUrl = "https:"+overallConditionUrlList[whichDate];
+            GetNodeData("", responseXml, "heatindex", whichDate);
+            forecastData.heatIndex = heatIndexList[whichDate];
             GetNodeData("", responseXml, "", whichDate);
             forecastData.currentDay = currentDayList[whichDate];
 
@@ -90,6 +93,37 @@ namespace WeatherAppUsingApi
                 foreach (XmlNode xmlNode in xmlNodes)
                 {
                     overallConditionUrlList.Add(xmlNode.InnerText);
+                }
+            }
+            else if (whichList == "heatindex")
+            {
+                XmlNodeList xmlNodes = responseXml.SelectNodes("//forecast/forecastday/day/air_quality/us-epa-index");
+                foreach (XmlNode xmlNode in xmlNodes)
+                {
+                    if(xmlNode.InnerText == "1")
+                    {
+                        heatIndexList.Add("1. Good");
+                    }
+                    else if(xmlNode.InnerText == "2")
+                    {
+                        heatIndexList.Add("2. Moderate");
+                    }
+                    else if (xmlNode.InnerText == "2")
+                    {
+                        heatIndexList.Add("3. Unhealthy for sensitive groups");
+                    }
+                    else if (xmlNode.InnerText == "2")
+                    {
+                        heatIndexList.Add("4. Unhealthy");
+                    }
+                    else if (xmlNode.InnerText == "2")
+                    {
+                        heatIndexList.Add("5. Very Unhealthy");
+                    }
+                    else if (xmlNode.InnerText == "2")
+                    {
+                        heatIndexList.Add("6. Hazardous");
+                    }
                 }
             }
             else

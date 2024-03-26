@@ -15,5 +15,6 @@ namespace WeatherAppUsingApi
         public string chanceOfRain { get; set; }        //daily_chance_of_rain
         public string overallCondition { get; set; }    //text
         public string overallConditionUrl { get; set; } //icon
+        public string heatIndex { get; set; }
     }
 }
