@@ -8,6 +8,7 @@ namespace WeatherAppUsingApi
 {
     internal class ForecastData
     {
+        public string currentDay {  get; set; }
         public string maxTemp {  get; set; }            //maxtemp_f
         public string minTemp {  get; set; }            //mintemp_f
         public string willItRain { get; set; }          //daily_will_it_rain

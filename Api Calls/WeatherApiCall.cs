@@ -40,7 +40,7 @@ namespace WeatherAppUsingApi
         {
             try
             {
-                var request = WebRequest.Create(weatherApiUri + "forecast.xml?" + "key=" + apiKey + "&q=" + zipCode) as HttpWebRequest;
+                var request = WebRequest.Create(weatherApiUri + "forecast.xml?" + "key=" + apiKey + "&q=" + zipCode + "&days=8") as HttpWebRequest;
                 var response = request.GetResponse();
                 Stream receiveStream = response.GetResponseStream();
                 StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
