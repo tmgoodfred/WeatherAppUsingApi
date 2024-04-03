@@ -34,15 +34,15 @@ namespace WeatherAppUsingApi
                 double windspeedParsed = Double.Parse(windSpeed);
                 if (windspeedParsed < 8)
                 {
-                    stringToReturn = "Barely any wind - "+windSpeed + "mph";
+                    stringToReturn = "Barely any wind - "+windSpeed + " mph";
                 }
                 else if (windspeedParsed > 8 && windspeedParsed < 20)
                 {
-                    stringToReturn = "Nice little breeze - "+windSpeed + "mph";
+                    stringToReturn = "Nice little breeze - "+windSpeed + " mph";
                 }
                 else
                 {
-                    stringToReturn = "IT'S REAL WIMDY - "+windSpeed+"mph";
+                    stringToReturn = "IT'S REAL WIMDY - "+windSpeed+" mph";
                 }
             }
             catch
