@@ -123,7 +123,25 @@ namespace WeatherAppUsingApi
                 {
                     T = double.Parse(maxTempList[i]);
                     RH = double.Parse(humidityList[i]);
-                    result = -42.379 + 2.04901523 * T + 10.14333127 * RH - .22475541 * T * RH - .00683783 * T * T - .05481717 * RH * RH + .00122874 * T * T * RH + .00085282 * T * RH * RH - .00000199 * T * T * RH * RH;
+                    double resultNorm = 0.5 * (T + 61.0 + ((T - 68.0) * 1.2) + (RH * 0.094));
+                    double adjustment = ((resultNorm + T) / 2);
+                    if (adjustment < 80)
+                    {
+                        result = resultNorm;
+                    }
+                    else
+                    {
+                        result = -42.379 + 2.04901523 * T + 10.14333127 * RH - .22475541 * T * RH - .00683783 * T * T - .05481717 * RH * RH + .00122874 * T * T * RH + .00085282 * T * RH * RH - .00000199 * T * T * RH * RH;
+                        if (RH < 13 && T > 80 && T < 112)
+                        {
+                            result -= (((13 - RH) / 4) * Math.Sqrt((17 - Math.Abs(T - 95)) / 17));
+                        }
+                        if (RH > 85 && T > 80 & T < 87)
+                        {
+                            result += ((RH - 85) / 10) * ((87 - T) / 5);
+                        }
+                    }
+                    
                     result = Math.Round(result, 2);
                     heatIndex = result.ToString()+" f";
                     heatIndexList.Add(heatIndex);

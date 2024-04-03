@@ -28,6 +28,7 @@ namespace WeatherAppUsingApi
             chanceOfRainTxt.Text = forecastDataNow.chanceOfRain + "%";
             conditionTxt.Text = forecastDataNow.overallCondition;
             conditionImg.ImageLocation = forecastDataNow.overallConditionUrl;
+            heatIndexTodayTxt.Text = forecastDataNow.heatIndex;
             locationLabel.Text = location;
 
             forecastDataDay1 = currentForecastInfo.PopulateForecastData(zipCode, 1);

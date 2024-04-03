@@ -90,12 +90,14 @@
             this.heatIndexDay5Txt = new System.Windows.Forms.TextBox();
             this.heatIndexDay6Txt = new System.Windows.Forms.TextBox();
             this.heatIndexDay7Txt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.heatIndexTodayTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.conditionImg)).BeginInit();
             this.SuspendLayout();
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(282, 244);
+            this.backBtn.Location = new System.Drawing.Point(283, 278);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(75, 23);
             this.backBtn.TabIndex = 0;
@@ -652,11 +654,30 @@
             this.heatIndexDay7Txt.TabIndex = 60;
             this.heatIndexDay7Txt.Visible = false;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(159, 231);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "Heat Index";
+            // 
+            // heatIndexTodayTxt
+            // 
+            this.heatIndexTodayTxt.Location = new System.Drawing.Point(228, 228);
+            this.heatIndexTodayTxt.Name = "heatIndexTodayTxt";
+            this.heatIndexTodayTxt.ReadOnly = true;
+            this.heatIndexTodayTxt.Size = new System.Drawing.Size(100, 20);
+            this.heatIndexTodayTxt.TabIndex = 62;
+            // 
             // FutureForecastPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 291);
+            this.ClientSize = new System.Drawing.Size(837, 337);
+            this.Controls.Add(this.heatIndexTodayTxt);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.heatIndexDay7Txt);
             this.Controls.Add(this.heatIndexDay6Txt);
             this.Controls.Add(this.heatIndexDay5Txt);
@@ -791,5 +812,7 @@
         private System.Windows.Forms.TextBox heatIndexDay5Txt;
         private System.Windows.Forms.TextBox heatIndexDay6Txt;
         private System.Windows.Forms.TextBox heatIndexDay7Txt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox heatIndexTodayTxt;
     }
 }
