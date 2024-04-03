@@ -105,33 +105,28 @@ namespace WeatherAppUsingApi
             }
             else if (whichList == "heatindex")
             {
-                XmlNodeList xmlNodes = responseXml.SelectNodes("//forecast/forecastday/day/air_quality/us-epa-index");
+                List<string> maxTempList = new List<string>();
+                List<string> humidityList = new List<string>();
+                double T = 0, RH = 0, result = 0;
+                string heatIndex = "";
+                XmlNodeList xmlNodes = responseXml.SelectNodes("//forecast/forecastday/day/maxtemp_f");
                 foreach (XmlNode xmlNode in xmlNodes)
                 {
-                    if(xmlNode.InnerText == "1")
-                    {
-                        heatIndexList.Add("1. Good");
-                    }
-                    else if(xmlNode.InnerText == "2")
-                    {
-                        heatIndexList.Add("2. Moderate");
-                    }
-                    else if (xmlNode.InnerText == "2")
-                    {
-                        heatIndexList.Add("3. Unhealthy for sensitive groups");
-                    }
-                    else if (xmlNode.InnerText == "2")
-                    {
-                        heatIndexList.Add("4. Unhealthy");
-                    }
-                    else if (xmlNode.InnerText == "2")
-                    {
-                        heatIndexList.Add("5. Very Unhealthy");
-                    }
-                    else if (xmlNode.InnerText == "2")
-                    {
-                        heatIndexList.Add("6. Hazardous");
-                    }
+                    maxTempList.Add(xmlNode.InnerText);
+                }
+                XmlNodeList xmlNodes2 = responseXml.SelectNodes("//forecast/forecastday/day/avghumidity");
+                foreach (XmlNode xmlNode in xmlNodes2)
+                {
+                    humidityList.Add(xmlNode.InnerText);
+                }
+                for (int i = 0; i < maxTempList.Count; i++)
+                {
+                    T = double.Parse(maxTempList[i]);
+                    RH = double.Parse(humidityList[i]);
+                    result = -42.379 + 2.04901523 * T + 10.14333127 * RH - .22475541 * T * RH - .00683783 * T * T - .05481717 * RH * RH + .00122874 * T * T * RH + .00085282 * T * RH * RH - .00000199 * T * T * RH * RH;
+                    result = Math.Round(result, 2);
+                    heatIndex = result.ToString()+" f";
+                    heatIndexList.Add(heatIndex);
                 }
             }
             else

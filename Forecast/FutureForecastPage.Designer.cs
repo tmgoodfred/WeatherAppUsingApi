@@ -587,24 +587,24 @@
             this.heatIndexDay1Txt.Location = new System.Drawing.Point(739, 55);
             this.heatIndexDay1Txt.Name = "heatIndexDay1Txt";
             this.heatIndexDay1Txt.ReadOnly = true;
-            this.heatIndexDay1Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay1Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay1Txt.TabIndex = 53;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(757, 36);
+            this.label7.Location = new System.Drawing.Point(739, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 13);
+            this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 54;
-            this.label7.Text = "Heat Index (1- low, 6 - high)";
+            this.label7.Text = "Heat Index";
             // 
             // heatIndexDay2Txt
             // 
             this.heatIndexDay2Txt.Location = new System.Drawing.Point(739, 82);
             this.heatIndexDay2Txt.Name = "heatIndexDay2Txt";
             this.heatIndexDay2Txt.ReadOnly = true;
-            this.heatIndexDay2Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay2Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay2Txt.TabIndex = 55;
             // 
             // heatIndexDay3Txt
@@ -612,7 +612,7 @@
             this.heatIndexDay3Txt.Location = new System.Drawing.Point(739, 108);
             this.heatIndexDay3Txt.Name = "heatIndexDay3Txt";
             this.heatIndexDay3Txt.ReadOnly = true;
-            this.heatIndexDay3Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay3Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay3Txt.TabIndex = 56;
             this.heatIndexDay3Txt.Visible = false;
             // 
@@ -621,7 +621,7 @@
             this.heatIndexDay4Txt.Location = new System.Drawing.Point(739, 134);
             this.heatIndexDay4Txt.Name = "heatIndexDay4Txt";
             this.heatIndexDay4Txt.ReadOnly = true;
-            this.heatIndexDay4Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay4Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay4Txt.TabIndex = 57;
             this.heatIndexDay4Txt.Visible = false;
             // 
@@ -630,7 +630,7 @@
             this.heatIndexDay5Txt.Location = new System.Drawing.Point(739, 160);
             this.heatIndexDay5Txt.Name = "heatIndexDay5Txt";
             this.heatIndexDay5Txt.ReadOnly = true;
-            this.heatIndexDay5Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay5Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay5Txt.TabIndex = 58;
             this.heatIndexDay5Txt.Visible = false;
             // 
@@ -639,7 +639,7 @@
             this.heatIndexDay6Txt.Location = new System.Drawing.Point(739, 186);
             this.heatIndexDay6Txt.Name = "heatIndexDay6Txt";
             this.heatIndexDay6Txt.ReadOnly = true;
-            this.heatIndexDay6Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay6Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay6Txt.TabIndex = 59;
             this.heatIndexDay6Txt.Visible = false;
             // 
@@ -648,7 +648,7 @@
             this.heatIndexDay7Txt.Location = new System.Drawing.Point(739, 212);
             this.heatIndexDay7Txt.Name = "heatIndexDay7Txt";
             this.heatIndexDay7Txt.ReadOnly = true;
-            this.heatIndexDay7Txt.Size = new System.Drawing.Size(163, 20);
+            this.heatIndexDay7Txt.Size = new System.Drawing.Size(59, 20);
             this.heatIndexDay7Txt.TabIndex = 60;
             this.heatIndexDay7Txt.Visible = false;
             // 
@@ -656,7 +656,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 291);
+            this.ClientSize = new System.Drawing.Size(837, 291);
             this.Controls.Add(this.heatIndexDay7Txt);
             this.Controls.Add(this.heatIndexDay6Txt);
             this.Controls.Add(this.heatIndexDay5Txt);
