@@ -55,5 +55,25 @@ namespace WeatherAppUsingApi
             }
             return responseXml;
         }
+
+        public XmlDocument CallApi_GetMidnightForecast(string zipCode, string date)
+        {
+            try
+            {
+                var request = WebRequest.Create(weatherApiUri + "forecast.xml?" + "key=" + apiKey + "&date=" + date + "&hour=0" + "&q=" + zipCode) as HttpWebRequest;
+                var response = request.GetResponse();
+                Stream receiveStream = response.GetResponseStream();
+                StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+
+                var result = readStream.ReadToEnd();
+                responseXml.LoadXml(result);
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong", "Uh oh!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return responseXml;
+        }
     }
 }

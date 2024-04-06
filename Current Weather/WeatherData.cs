@@ -12,5 +12,6 @@
         public string tempFeelsLike { get; set; }   //feelslike_f
         public string humidity { get; set; }        //humidity
         public string iconUrl { get; set; }         //icon
+        public string nightTemp { get; set; }       //temp at midnight
     }
 }

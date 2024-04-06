@@ -44,6 +44,8 @@
             this.humidityTxt = new System.Windows.Forms.TextBox();
             this.forecastBtn = new System.Windows.Forms.Button();
             this.theirTimeLabel = new System.Windows.Forms.Label();
+            this.nightTempTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             // getWeatherBtn
             // 
-            this.getWeatherBtn.Location = new System.Drawing.Point(143, 241);
+            this.getWeatherBtn.Location = new System.Drawing.Point(131, 274);
             this.getWeatherBtn.Name = "getWeatherBtn";
             this.getWeatherBtn.Size = new System.Drawing.Size(82, 23);
             this.getWeatherBtn.TabIndex = 1;
@@ -163,7 +165,7 @@
             // 
             // forecastBtn
             // 
-            this.forecastBtn.Location = new System.Drawing.Point(263, 241);
+            this.forecastBtn.Location = new System.Drawing.Point(251, 274);
             this.forecastBtn.Name = "forecastBtn";
             this.forecastBtn.Size = new System.Drawing.Size(75, 23);
             this.forecastBtn.TabIndex = 14;
@@ -180,9 +182,29 @@
             this.theirTimeLabel.TabIndex = 15;
             this.theirTimeLabel.Text = "Time and Date at Location:";
             // 
+            // nightTempTxt
+            // 
+            this.nightTempTxt.Location = new System.Drawing.Point(153, 233);
+            this.nightTempTxt.Name = "nightTempTxt";
+            this.nightTempTxt.ReadOnly = true;
+            this.nightTempTxt.Size = new System.Drawing.Size(56, 20);
+            this.nightTempTxt.TabIndex = 16;
+            this.nightTempTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(51, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Night Temp (12AM)";
+            // 
             // WeatherMainPage
             // 
-            this.ClientSize = new System.Drawing.Size(378, 295);
+            this.ClientSize = new System.Drawing.Size(378, 324);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.nightTempTxt);
             this.Controls.Add(this.theirTimeLabel);
             this.Controls.Add(this.forecastBtn);
             this.Controls.Add(this.humidityTxt);
@@ -225,6 +247,8 @@
         private System.Windows.Forms.TextBox humidityTxt;
         private System.Windows.Forms.Button forecastBtn;
         private System.Windows.Forms.Label theirTimeLabel;
+        private System.Windows.Forms.TextBox nightTempTxt;
+        private System.Windows.Forms.Label label6;
     }
 }
 
